@@ -17,3 +17,4 @@ Usage:
     $ ./stegano-snd -e song.wav -t secret.txt -o song-encoded.wav
     $ ./stegano-snd -d song-encoded.wav -o
     
+![Screenshot](https://raw.github.com/akos-sereg/stegano-snd/master/doc/sound.PNG "Stegano-SND")
