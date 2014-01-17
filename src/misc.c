@@ -50,7 +50,7 @@ void help()
     fprintf(stdout, "	-d <file>	.wav file, decode data from this sound file\n");
     fprintf(stdout, "	-t <file>	Data file to be encoded\n");
     fprintf(stdout, "	-o <file>	Encoded output file: in case of encoding, this is the encoded \n");
-    fprintf(stdout, "			sound fil. In case of decoding, this is the data file.\n");
+    fprintf(stdout, "			sound file. In case of decoding, this is the data file.\n");
     fprintf(stdout, "	-s		Print data file content to stdout.\n");
     fprintf(stdout, "	-h		Help\n\n");
     fprintf(stdout, " ---- Example ----\n");
