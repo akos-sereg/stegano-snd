@@ -4,6 +4,8 @@ stegano-snd
 This is an experimental project from my university years.   
 The program was written in **C**, using **libsndfile1-dev** library. You can embed secret data (encode) into a sound file, with minimal loss of sound quality (you can not even recognize by listening). After that, you are able to retrieve (decode) the secret content from the encoded file.   
 
+![Screenshot](https://raw.github.com/akos-sereg/stegano-snd/master/doc/encoding.png "Encoding")
+
 **Usage**   
 
 Prerequisites:   
