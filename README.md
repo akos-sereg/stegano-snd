@@ -8,7 +8,7 @@ The program was written in **C**, using **libsndfile1-dev** library. You can emb
 
 **Usage**   
 
-Prerequisites:   
+Prerequisites and Install:   
 
     $ apt-get install libsndfile1-dev
     $ cd stegano-snd
