@@ -2,9 +2,16 @@ stegano-snd
 ===========
 
 This is an experimental project from my university years.   
-The program was written in **C**, using **libsndfile1-dev** library. You can embed secret data (encode) into a sound file, with minimal loss of sound quality (you can not even recognize by listening). After that, you are able to retrieve (decode) the secret content from the encoded file.   
+The program was written in **C**, using **libsndfile1-dev** library. Stegano-snd command line tool allows you to encode secret data file into a .wav sound file with minimal loss of quality, and then you can restore the secret content back from the .wav stream. 
 
-![Screenshot](https://raw.github.com/akos-sereg/stegano-snd/master/doc/encoding.png "Encoding")
+Use-case:
+ * Encode secret data into soundtracks (44.1 khz, stereo)
+ * Write soundtracks to CD
+ * Listen to the music: there is secret data in the background which you can not "hear" at all
+ * Use any CD grabber to extract .wav files back (44.1 khz, stereo again)
+ * Restore secret data by decoding .wav files
+
+In theory, you should be able to encode **50.46 MB** of secret data into a 80 min CD by using this technique.
 
 **Usage**   
 
