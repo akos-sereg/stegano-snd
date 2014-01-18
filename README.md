@@ -2,7 +2,7 @@ stegano-snd
 ===========
 
 This is an experimental project from my university years.   
-The program was written in **C**, using **libsndfile1-dev** library. Stegano-snd command line tool allows you to encode secret data file into a .wav sound file with minimal loss of quality, and then you can restore the secret content back from the .wav stream. 
+The program was written in **C**, using **libsndfile1-dev** library. Stegano-snd command line tool allows you to hide secret data into a .wav sound file with minimal loss of quality, and then you can restore the secret content back from the .wav stream. 
 
 **Use-case**
  * Encode secret data into soundtracks (44.1 khz, stereo)
