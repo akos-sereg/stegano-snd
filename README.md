@@ -15,14 +15,19 @@ In theory, you should be able to encode **50.46 MB** of secret data into a 80 mi
 
 **Usage**   
 
-Prerequisites and Install:   
+Prerequisites:   
 
     $ apt-get install libsndfile1-dev
+    $ apt-get install mpg123
+    
+Install:
+
     $ cd stegano-snd
     $ make
 
 Usage:
 
+    $ mpg123 -w song.wav song.mp3
     $ ./stegano-snd -e song.wav -t secret.txt -o song-encoded.wav
     $ ./stegano-snd -d song-encoded.wav -o
     
