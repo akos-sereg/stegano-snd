@@ -16,9 +16,11 @@ struct usr_defs
     char input[256];
     char output[256];
     char textfile[256];
+    char analysis_file[256];
     int decode;
     int encode;
     int stdout;
+    int analysis;
     
 } usr_defs;
 

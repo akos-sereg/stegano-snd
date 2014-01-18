@@ -13,10 +13,15 @@ int main(int argc, char **argv)
 
     for(i=0; i!=2; i++)
     {
-	while((c = getopt(argc, argv, "e:d:t:o:hs"))  != EOF)
+	while((c = getopt(argc, argv, "a:e:d:t:o:hs"))  != EOF)
 	{
 	    switch(c)
 	    {
+		case 'a':
+		    if(usr_defs.encode || usr_defs.decode) help();
+		    sprintf(usr_defs.analysis_file, "%s", optarg);
+		    usr_defs.analysis = 1;
+		    break;
 		case 'e':
 		    if(usr_defs.decode) help();
 		    sprintf(usr_defs.input, "%s", optarg);

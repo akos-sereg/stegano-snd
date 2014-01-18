@@ -180,6 +180,28 @@ int *toBits(char c)
 }		    
 
 
+void wav_analysis(char *insnd)
+{
+    SNDFILE *infile;
+    SF_INFO sfinfo;
+
+    infile = sf_open(insnd, SFM_READ, &sfinfo);
+    long capacityBit = (int)(sfinfo.frames * sfinfo.channels);
+    double capacityByte = capacityBit / 8;
+    double capacityKb = capacityBit / 8 / 1024;
+    double capacityMb = capacityBit / 8 / 1024 / 1024;
+    
+    printf("Frames: %d\n", (int)sfinfo.frames);
+    printf("Channels: %d\n", (int)sfinfo.channels);
+    printf("Capacity: %d bit\n", (int)(sfinfo.frames * sfinfo.channels));
+    printf("  => %.2f bytes\n", capacityByte);
+    printf("  => %.2f Kb\n", capacityKb);
+    printf("  => %.2f MB\n", capacityMb);
+    
+    return;
+}
+
+
 void wav_encode(char *insnd, char *outsnd, char *key_fname)
 {
     SNDFILE *outfile, *infile;

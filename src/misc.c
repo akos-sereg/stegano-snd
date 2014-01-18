@@ -2,7 +2,12 @@
 
 void hcore()
 {
-    if(usr_defs.encode) 
+    if (usr_defs.analysis) {
+	if (strlen(usr_defs.analysis_file) == 0) help();
+    
+	wav_analysis(usr_defs.analysis_file);
+    }
+    else if(usr_defs.encode) 
     {
 	if(strlen(usr_defs.input) == 0) help();
 	if((strlen(usr_defs.output) == 0) && (usr_defs.stdout==0)) help();
@@ -46,6 +51,7 @@ void die(char *str)
 void help()
 {
     fprintf(stdout, "Usage: %s [OPTION]...\n", program);
+    fprintf(stdout, "	-a <file>	Analysis for .wav file (capacity)\n");
     fprintf(stdout, "	-e <file>	.wav file, encode data into this sound file\n");
     fprintf(stdout, "	-d <file>	.wav file, decode data from this sound file\n");
     fprintf(stdout, "	-t <file>	Data file to be encoded\n");
